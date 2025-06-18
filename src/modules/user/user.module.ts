@@ -4,6 +4,8 @@ import { User } from './user.entity';
 import { UserService } from './user.service';
 import { UserController } from './user.controller';
 import { JwtModule } from '@nestjs/jwt';
+import { PassportModule } from '@nestjs/passport';
+import { AuthModule } from 'src/auth/auth.module';
 
 @Module({
   imports: [TypeOrmModule.forFeature([User]),

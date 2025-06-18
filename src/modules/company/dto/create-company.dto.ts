@@ -1,4 +1,4 @@
-import { IsBoolean, IsDate, IsEmail, IsEnum, IsNotEmpty, IsNumber, IsOptional, IsString } from "class-validator";
+import { IsBoolean, IsEmail, IsEnum, IsNotEmpty, IsNumber, IsOptional, IsString } from "class-validator";
 import { PayrollType, CountryName} from "../company.entity"
 import { Type } from "class-transformer";
 
