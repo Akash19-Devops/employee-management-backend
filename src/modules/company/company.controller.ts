@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
 import { CompanyService } from './company.service';
 import { CreateCompanyDto } from './dto/create-company.dto';
-import { Company } from './company.schema';
+import { Company } from './company.entity';
 import { JwtAuthGuard } from 'src/auth/jwt.strategy';
 
 @Controller('company')

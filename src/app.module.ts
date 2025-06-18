@@ -3,19 +3,17 @@ import { ConfigModule } from './config/config.module';
 import { UserModule } from './modules/user/user.module';
 import { DatabaseModule } from './database/database.module';
 import { ServerModule } from './modules/server/server.module';
-import { JwtStrategy } from './auth/jwt-auth.guard';
 import { CompanyModule } from './modules/company/company.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  providers: [
-    JwtStrategy
-  ],
   imports: [
     ConfigModule,
     UserModule,
     DatabaseModule,
     ServerModule,
     CompanyModule,
+    AuthModule
     // Add more modules here
   ],
 })

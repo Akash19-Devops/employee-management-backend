@@ -1,5 +1,5 @@
 import { IsBoolean, IsDate, IsEmail, IsEnum, IsNotEmpty, IsNumber, IsOptional, IsString } from "class-validator";
-import { PayrollType, CountryName} from "../company.schema"
+import { PayrollType, CountryName} from "../company.entity"
 import { Type } from "class-transformer";
 
 export class CreateCompanyDto {
