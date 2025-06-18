@@ -1,7 +1,7 @@
 import { Body, Controller, Patch, Post, UseGuards, Request, Get } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
-import { User } from './user.schema';
+import { User } from './user.entity';
 import { LoginUserDto } from './dto/login-user.dto';
 import { UpdateProfileDto } from './dto/update-profile.dto';
 import { UpdatePasswordDto } from './dto/update-password.dto';
@@ -24,7 +24,7 @@ export class UserController {
 
     @UseGuards(JwtAuthGuard)
     @Get('profile')
-    async getProfile(@Request() req): Promise<User> {
+    async getProfile(@Request() req): Promise<Partial<User>> {
         return this.userService.getProfile(req.user.userId)
     }
 
